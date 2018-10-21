@@ -87,7 +87,7 @@ def transfer(c_sent, s_sent):
             reg = f_gram.mean()
             # print(c_loss, s_loss, reg)
             # NOTE: weights emprically determined
-            loss = 10 * c_loss + s_loss + 1e-2 * reg
+            loss = 10 * c_loss + s_loss + 1e-3 * reg
 
             optimizer.zero_grad()
             loss.backward()
