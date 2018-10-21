@@ -1,0 +1,11 @@
+<html>
+  <h1>Text Style Transfer</h1>
+  <form method="post" action="styleTransfer">
+    <label for="c_sent">Content sentence</label>
+    <input name="c_sent" id="c_sent" size="50" required>
+    <label for="s_sent">Style sentence</label>
+    <input name="s_sent" id="s_sent" size="50" required>
+    <input type="submit" value="Transfer">
+  </form>
+  <p><strong>Final sentence:</strong> {{f_sent}}</p>
+</html>
