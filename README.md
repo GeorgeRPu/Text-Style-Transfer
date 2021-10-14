@@ -1,4 +1,4 @@
-# TextStyleTransfer
+# Text Style Transfer
 
 Text style transfer manipulates the style of a sentence without changing the words used. For example, we might want to adjust the tense to of a sentence from past to present to future perfect.
 
@@ -14,9 +14,17 @@ where MSE is mean squared error. The frontend website is served using Flask.
 Made at GTHacks 5: https://devpost.com/software/text-style-transfer.
 
 ## Dependencies
-- Numpy
-- PyTorch
-- Scikit-learn
-- fastText (just need .vec, [InferSent repo](https://github.com/facebookresearch/InferSent) has download instructions)
-- NLTK
-- Flask
+
+Install using
+
+```bash
+pip install -r requirements.txt
+```
+
+## Running Instructions
+
+Start the development server using
+
+```bash
+flask run
+```
