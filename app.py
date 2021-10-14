@@ -18,15 +18,18 @@ def styleTransfer():
     if request.method == 'POST':
         c_sent = request.form['c_sent']
         s_sent = request.form['s_sent']
-        error = None
+        num_steps = int(request.form['num_steps'])
 
+        error = None
         if not c_sent:
             error = 'Content sentence is required.'
         elif not s_sent:
             error = 'Style sentence is required.'
+        elif not num_steps:
+            error = 'Number of steps is required.'
 
         if error is None:
-            f_sent = transfer(c_sent, s_sent)
+            f_sent = transfer(c_sent, s_sent, num_steps)
 
         return render_template('index.html', f_sent=f_sent)
 

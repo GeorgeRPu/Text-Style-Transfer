@@ -1,0 +1,12 @@
+label {
+    width:125px;
+    display: inline-block;
+}
+
+#num_steps {
+    vertical-align: middle;
+}
+
+output {
+    vertical-align: middle;
+}
