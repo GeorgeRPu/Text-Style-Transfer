@@ -25,7 +25,7 @@ model.load_state_dict(torch.load(f'./InferSent/encoder/infersent{VERSION}.pkl'))
 if VERSION == 1:
     w2v = 'InferSent/dataset/GloVe/glove.840B.300d.txt'
 else:
-    w2v = 'InferSent/dataset/fastText/crawl-300d-2M.vec'
+    w2v = 'InferSent/dataset/fastText/crawl-300d-2M.vec.gz'
 model.set_w2v_path(w2v)
 
 VOCAB_SIZE = int(os.environ['VOCAB_SIZE'])
@@ -102,3 +102,7 @@ def transfer(c_sent, s_sent, num_steps):
     f_np = f_stack.squeeze().cpu().detach().numpy()
     f_sent = vec2word.predict(f_np)
     return ' '.join(f_sent)
+
+
+if __name__ == '__main__':
+    print(transfer('To be or not to be', 'that is the question', 20))

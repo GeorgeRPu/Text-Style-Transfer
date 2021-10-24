@@ -146,7 +146,7 @@ class InferSent(nn.Module):
         k = 0
         word_vec = {}
         # HACK: specify encoding
-        with open(self.w2v_path, encoding='utf-8') as f:
+        with gzip.open(self.w2v_path, 'rt', encoding='utf-8') as f:
             for line in f:
                 word, vec = line.split(' ', 1)
                 if k <= K:

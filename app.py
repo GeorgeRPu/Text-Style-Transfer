@@ -1,5 +1,4 @@
-"""
-See https://stackoverflow.com/questions/45553629/how-to-run-a-python-script-on-flask-backend
+"""See https://stackoverflow.com/questions/45553629/how-to-run-a-python-script-on-flask-backend
 """
 
 from flask import Flask, render_template, request
